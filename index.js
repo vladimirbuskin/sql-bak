@@ -12,8 +12,10 @@ function _backup(db, bak, cb)
     '-v',
     'dbname="'+db+'"',
     'bak="'+bak+'"',
-    '-E -i ./backup.sql'
+    '-E -i ' + __dirname + '/backup.sql'
   ];
+
+  console.log(url.join(' '));
 
   exec(url.join(' '), function (err, stdout, stderr) {
     console.log(stdout);
