@@ -20,7 +20,7 @@
     "yargs": "3.32.0"
   },
   "bin": {
-    "sql-bak-restore": "bin/index.js"
+    "sql-bak": "bin/index.js"
   },
   "preferGlobal": "true",
   "gitHead": "7a39a3446fb4b7216d8ea93f912f7148e3929ab5",
