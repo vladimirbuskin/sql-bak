@@ -1,0 +1,4 @@
+BACKUP DATABASE [$(dbname)] 
+TO DISK = '$(bak)'
+WITH DIFFERENTIAL 
+GO
