@@ -4,8 +4,8 @@ let path = require('path');
 
 function _backup(db, bak, cb)
 {
-  bak = path.join(__dirname, (bak || db) + '.bak');
-
+  bak = bak || (db + '.bak')
+  bak = path.isAbsolute(bak) ? bak : path.join(process.cwd(), bak);
   const { exec } = require('child_process');
   let url = [
     'sqlcmd',
@@ -35,6 +35,7 @@ function backup()
     let bakName = argv[3];
       _backup(dbName, bakName)
   }
+
 
 
 }
